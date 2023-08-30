@@ -1,0 +1,87 @@
+body {
+    font-family: 'Playfair Display', serif;
+
+}
+.moviesImage{
+    width: 200px;
+}
+.movieDetailsWrapper{
+    max-width: 100%;
+}
+.movieDetailsContainer {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+        width: 100%;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+            0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+    margin-bottom: 50px;
+    padding: 0;
+           
+   
+}
+
+
+
+.movieInfo {
+    margin-left: 20px;
+}
+
+.movieDetailsList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.genreList {
+    list-style-type: none;
+    padding: 0;
+}
+.navText {
+    color: black;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.navText:hover {
+    color: dodgerblue;}
+.icon {
+        margin-right: 5px;
+    }
+.movieDetailsList {
+    list-style: none;
+    padding: 0;
+     margin: 0;
+    }
+    
+.movieDetailsItem {
+     margin-bottom: 10px;
+    }
+    
+.movieTitle {
+     font-size: 24px;
+    font-weight: bold;
+}
+    
+.movieSubTitle {
+    font-size: 18px;
+    font-weight: bold;
+    }
+    
+.movieOverview {
+    font-size: 16px;
+    margin: 5px 0;
+    }
+    
+.moviePopularity {
+    font-size: 14px;
+    margin: 5px 0;
+    }
+.linkList{
+        margin-bottom: 10px;
+        width: 100%;
+        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+                0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+.linkListItem{
+    margin-bottom: 10px;
+}

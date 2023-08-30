@@ -32,7 +32,7 @@ const Cast = () => {
   }, [params.movId]);
     return (
     <div>
-      <ul>
+      <ul className={cl.actor}>
         {actors.map(actor => (
             <li key={actor.id}>
                 <img className={cl.image}   src={`https://image.tmdb.org/t/p/w500${actor.profile_path}`} alt={actors.name} width='200' height='150'  />

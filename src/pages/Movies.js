@@ -1,5 +1,6 @@
 import {  useState, } from "react";
-import { Link, useLocation,useSearchParams } from "react-router-dom";
+import { Link, useLocation, useSearchParams } from "react-router-dom";
+import cl from './Movies.module.css'
 
 const Movies = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -34,28 +35,37 @@ const Movies = () => {
     }
     
   };
+  const handleSubmit = (e) => {
+    e.preventDefault(); 
+    handleSearchClick(); 
+  };
 
 
  
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="Search movies"
-        value={searchQuery}
-        onChange={handleChange}
-      />
-      <button onClick={handleSearchClick}>Search</button>
-      <ul>
-        {searchResults.map((movie) => (
-          <li key={movie.id}>
-            <Link to={`/movies/${movie.id}`} state={{ from: location }}>
-              {movie.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <div className={cl.searchContainer}>
+      <form onClick={handleSubmit}>
+        <input
+    type="text"
+    placeholder="Search movies"
+    value={searchQuery}
+    onChange={handleChange}
+    className={cl.searchInput}
+  />
+  <button onClick={handleSearchClick} className={cl.searchButton}>
+    Search
+  </button>
+    </form>
+  <ul className={cl.searchResults}>
+    {searchResults.map((movie) => (
+      <li key={movie.id}>
+        <Link to={`/movies/${movie.id}`} state={{ from: location }}>
+          {movie.title}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</div>
   );
 };
 

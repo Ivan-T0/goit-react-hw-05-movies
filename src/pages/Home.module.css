@@ -1,0 +1,17 @@
+body {
+    font-family: 'Playfair Display', serif;
+
+}
+.homeText {
+    color: blue;
+    font-size: 20px;
+}
+.homeText:hover {
+    color: dodgerblue;
+}
+.homeListItem{
+    margin-top: 15px;
+}
+.icon{
+    margin-right: 5px;
+}

@@ -1,5 +1,8 @@
 import { useEffect, useMemo, useState } from "react"
-import { Link } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import cl from './Home.module.css'
 
 const Home = () => {
     const [trendingMovies, setTrendingMovies] = useState([]);
@@ -21,13 +24,19 @@ const Home = () => {
   }, [options]);
 
   return (
-    <div>
+    <div >
+      <h1>
+        Trending today
+      </h1>
           <ul>
           {trendingMovies.map(movie => (
-          <li key={movie.id}>
-            <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
-          </li>
-        ))}    
+  movie.title && (
+    <li key={movie.id} className={cl.homeListItem}>
+      <FontAwesomeIcon icon={faStar} className={cl.icon} />
+      <NavLink to={`/movies/${movie.id}`} className={cl.homeText}>{movie.title}</NavLink>
+    </li>
+  )
+))}
      </ul>
     </div>
   );
