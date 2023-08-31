@@ -34,12 +34,12 @@ text-decoration: none;
     color: black;
     font-size: 30px;
 }
-.navText.active{
-    color: red;
 
-    }
 
 .navText:hover{
     color: dodgerblue;
+}
+.link.active {
+    color: tomato;
 }
 

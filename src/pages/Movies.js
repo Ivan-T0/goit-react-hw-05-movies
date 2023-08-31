@@ -1,4 +1,4 @@
-import {  useState, } from "react";
+import {  useState,useEffect } from "react";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
 import cl from './Movies.module.css'
 
@@ -16,6 +16,10 @@ const Movies = () => {
     setSearchQuery(newMovieName);
     setSearchParams({ q: newMovieName });
   };
+  useEffect(() => {
+        handleSearchClick()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
   const handleSearchClick = () => {
     const newMovieName = searchQuery.toLowerCase();
